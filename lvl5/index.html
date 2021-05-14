@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+    <title>sample</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="time">経過秒数  : <span id="time">0</span></div>
+    <canvas id="screen"></canvas>
+        <div class="text">
+            <p id="info"></p>
+            <a href="" id="reset" class="playing">もう一度遊ぶ</a>
+            <a href="../lvl6/index.html" id="next" class="playing">次のステージへ</a>
+            <section class="production">
+            <table>
+                <tr>
+                    <th>操作</th>
+                    <th>キーボード入力</th>
+                    <th>マウス操作</th>
+                </tr>
+                <tr>
+                    <td>リセット</td>
+                    <td>ctrl + R</td>
+                    <td>終了後ボタンが表示されます</td>
+                </tr>
+                <tr>
+                    <td>移動</td>
+                    <td>十字キー</td>
+                    <td>カーソル操作</td>
+                </tr>
+                <tr>
+                    <td>ショット</td>
+                    <td>F キー</td>
+                    <td>左クリック</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript" src="character.js"></script>
+    <script type="text/javascript" src="boss.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
