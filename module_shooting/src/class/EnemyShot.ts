@@ -1,3 +1,4 @@
+import { canvas } from "../init/variable";
 import { Point } from "./Point";
 
 // 敵キャラクターの弾幕の設定

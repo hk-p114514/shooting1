@@ -1,3 +1,4 @@
+import { canvas } from "../init/variable";
 import { Point } from "./Point";
 
 class Boss {
