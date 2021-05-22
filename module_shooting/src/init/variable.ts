@@ -40,6 +40,8 @@ type Variables = {
   timeOutId: NodeJS.Timeout;
   ctx: CanvasRenderingContext2D | null;
   p: Point;
+  counter: number;
+  score: number;
 };
 
 // 変数
@@ -53,4 +55,8 @@ export const variables: Variables = {
   ctx: null,
   // 汎用座標情報インスタンス
   p: new Point(),
+  // ゲームの進行度合いを表すカウンタ
+  counter: 0,
+  // ゲームのスコア
+  score: 0,
 };
