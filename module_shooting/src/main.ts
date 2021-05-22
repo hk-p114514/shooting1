@@ -12,7 +12,7 @@ import {
   UserMouse,
 } from "./init/variable";
 // クラス
-import { CharacterShot } from "./class/CharacterShot";
+import { CharacterShot } from "./class/PlayerShot";
 import { Enemy } from "./class/Enemy";
 import { EnemyShot } from "./class/EnemyShot";
 import { Bit } from "./class/Bit";

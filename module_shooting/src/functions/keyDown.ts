@@ -27,7 +27,12 @@ const keyDown = (event: KeyboardEvent): void => {
   }
 
   if (k === "f") {
-    variables.fire = true;
+    // variables.fire = true;
+    keyState.fire = true;
+  }
+
+  if (k === "r") {
+    location.reload();
   }
 
   // 中断

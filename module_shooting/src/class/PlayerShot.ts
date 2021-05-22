@@ -1,7 +1,8 @@
+import { constants } from "../init/variable";
 import { Point } from "./Point";
 
 // 弾幕の設定
-class CharacterShot {
+class PlayerShot {
   position: Point;
   size: number;
   speed: number;
@@ -28,4 +29,4 @@ class CharacterShot {
   }
 }
 
-export { CharacterShot };
+export { PlayerShot as CharacterShot };

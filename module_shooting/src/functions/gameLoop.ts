@@ -12,6 +12,7 @@ import {
   boss,
   reset,
 } from "../init/variable";
+import { fire } from "./fire";
 import { keyControl } from "./keyControl";
 import { runTimer } from "./runTimer";
 
@@ -56,17 +57,7 @@ const gameLoop = () => {
   }
 
   // ----------------------------------------------------------------
-
-  // vars.fire（真偽値）により発射の分岐
-  if (variables.fire) {
-    for (let i = 0; i < constants.playerShotMaxCount; i++) {
-      if (!playerShot[i].alive) {
-        playerShot[i].CharacterShotSet(player.position, 3, 7);
-        break;
-      }
-    }
-    variables.fire = false;
-  }
+  fire();
 
   // ショットを描くパスを設定
   if (variables.ctx) {
@@ -406,8 +397,7 @@ const gameLoop = () => {
     info.innerHTML = "SCORE　:　" + variables.score * 100;
   }
   // フラグによる再帰呼出
-  let fps = 1000 / 30;
-  if (variables.run) setTimeout(gameLoop, fps);
+  if (variables.run) setTimeout(gameLoop, constants.fps);
 };
 
 export { gameLoop };

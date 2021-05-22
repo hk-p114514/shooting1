@@ -19,6 +19,10 @@ const keyUp = (event: KeyboardEvent) => {
     keyState.bottom = false;
   }
 
+  if (k === "f") {
+    keyState.fire = false;
+  }
+
   event.preventDefault();
   return;
 };

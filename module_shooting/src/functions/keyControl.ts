@@ -1,4 +1,10 @@
-import { canvas, keyState, player, UserMouse } from "../init/variable";
+import {
+  canvas,
+  keyState,
+  player,
+  UserMouse,
+  variables,
+} from "../init/variable";
 
 const keyControl = (): void => {
   if (keyState.left) {
@@ -23,6 +29,10 @@ const keyControl = (): void => {
     if (UserMouse.y < canvas.height - 7) {
       UserMouse.y += player.speed;
     }
+  }
+
+  if (keyState.fire) {
+    variables.fire = true;
   }
 };
 

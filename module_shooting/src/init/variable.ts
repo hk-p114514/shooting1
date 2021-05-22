@@ -14,6 +14,7 @@ export const constants = {
   enemyMaxCount: 1000,
   enemyShotMaxCount: 500,
   bossBitCount: 2,
+  fps: 1000 / 30,
   // 色関係
   playerColor: "rgba(159, 84, 230, 0.562)",
   playerShotColor: "rgba(218, 76, 11, 0.75)",
@@ -66,6 +67,7 @@ type typeKeyState = {
   right: boolean;
   bottom: boolean;
   left: boolean;
+  fire: boolean;
 };
 
 // キーボードの状態
@@ -74,4 +76,5 @@ export const keyState: typeKeyState = {
   right: false,
   bottom: false,
   left: false,
+  fire: false,
 };
