@@ -2,7 +2,7 @@ import {
   canvas,
   constants,
   info,
-  mouse,
+  UserMouse,
   player,
   variables,
   playerShot,
@@ -12,6 +12,7 @@ import {
   boss,
   reset,
 } from "../init/variable";
+import { keyControl } from "./keyControl";
 import { runTimer } from "./runTimer";
 
 const gameLoop = () => {
@@ -21,9 +22,13 @@ const gameLoop = () => {
   if (info) {
     info.innerHTML = "SCORE: " + variables.score * 100 + " " + message;
   }
+
+  // プレイヤーの移動
+  keyControl();
+
   // 自機の位置を設定--------------------------------------------------------
-  player.position.x = mouse.x;
-  player.position.y = mouse.y;
+  player.position.x = UserMouse.x;
+  player.position.y = UserMouse.y;
 
   if (variables.ctx) {
     variables.ctx.clearRect(0, 0, canvas.width, canvas.height);

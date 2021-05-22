@@ -1,5 +1,5 @@
 import { Boss } from "../class/Boss";
-import { Character } from "../class/Character";
+import { Character } from "../class/Player";
 import { Point } from "../class/Point";
 
 // HTML要素の取得
@@ -24,7 +24,7 @@ export const constants = {
 };
 
 // インスタンス
-export const mouse = new Point();
+export const UserMouse = new Point();
 export const player = new Character();
 export const playerShot = new Array(constants.playerShotMaxCount);
 export const enemy = new Array(constants.enemyMaxCount);
@@ -32,7 +32,7 @@ export const enemyShot = new Array(constants.enemyShotMaxCount);
 export const boss = new Boss();
 export const bit = new Array(constants.bossBitCount);
 
-type Variables = {
+type typeVariables = {
   run: boolean;
   fire: boolean;
   startTime: number;
@@ -45,7 +45,7 @@ type Variables = {
 };
 
 // 変数
-export const variables: Variables = {
+export const variables: typeVariables = {
   run: true,
   fire: false,
   startTime: 0,
@@ -59,4 +59,19 @@ export const variables: Variables = {
   counter: 0,
   // ゲームのスコア
   score: 0,
+};
+
+type typeKeyState = {
+  top: boolean;
+  right: boolean;
+  bottom: boolean;
+  left: boolean;
+};
+
+// キーボードの状態
+export const keyState: typeKeyState = {
+  top: false,
+  right: false,
+  bottom: false,
+  left: false,
 };

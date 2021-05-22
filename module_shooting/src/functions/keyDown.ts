@@ -1,27 +1,28 @@
-import { canvas, mouse, variables } from "../init/variable";
+import { canvas, keyState, UserMouse, variables } from "../init/variable";
 
 const keyDown = (event: KeyboardEvent): void => {
   let k = event.key;
 
   if (k === "ArrowLeft") {
-    if (mouse.x < 7) return;
-    mouse.x -= 15;
+    if (UserMouse.x < 7) return;
+    // UserMouse.x -= 15;
+    keyState.left = true;
   }
 
   if (k === "ArrowRight") {
-    if (mouse.x < canvas.width - 7) {
-      mouse.x += 15;
+    if (UserMouse.x < canvas.width - 7) {
+      keyState.right = true;
     }
   }
 
   if (k === "ArrowUp") {
-    if (mouse.y < 7) return;
-    mouse.y -= 15;
+    if (UserMouse.y < 7) return;
+    keyState.top = true;
   }
 
   if (k === "ArrowDown") {
-    if (mouse.y < canvas.height - 7) {
-      mouse.y += 15;
+    if (UserMouse.y < canvas.height - 7) {
+      keyState.bottom = true;
     }
   }
 

@@ -9,7 +9,7 @@ import {
   enemy,
   enemyShot,
   bit,
-  mouse,
+  UserMouse,
 } from "./init/variable";
 // クラス
 import { CharacterShot } from "./class/CharacterShot";
@@ -21,6 +21,7 @@ import { mouseMove } from "./functions/mouseMove";
 import { mouseDown } from "./functions/mouseDown";
 import { keyDown } from "./functions/keyDown";
 import { gameLoop } from "./functions/gameLoop";
+import { keyUp } from "./functions/keyUp";
 
 // コンテキストの取得
 if (canvas) {
@@ -35,6 +36,7 @@ canvas.height = 400;
 canvas.addEventListener("mousemove", mouseMove, true);
 canvas.addEventListener("mousedown", mouseDown, true);
 document.addEventListener("keydown", keyDown, true);
+document.addEventListener("keyup", keyUp, true);
 
 // 自機の初期化
 player.init(14);
@@ -58,7 +60,7 @@ for (let i = 0; i < constants.bossBitCount; i++) {
 }
 
 // 初期位置の設定
-mouse.x = canvas.width / 2;
-mouse.y = canvas.height - 25;
+UserMouse.x = canvas.width / 2;
+UserMouse.y = canvas.height - 25;
 
 gameLoop();
